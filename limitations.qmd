@@ -1,0 +1,21 @@
+---
+title: "Limitations"
+---
+
+## What this project can answer
+
+This project explores how location and the other property characteristics examined in our findings relate to assessed property values in Vancouver. Together, the visualizations identify patterns across areas and value ranges, highlighting factors that prospective homebuyers can consider when comparing homes and neighbourhoods. The dashboard supports this exploration by showing where properties within a selected assessed land-value range are concentrated.
+
+These findings provide a starting point for a home search. They help readers compare areas, recognize variation across the city, and identify questions to investigate further. They show associations between the variables examined and assessed values, but do not establish that any one factor causes a price difference or predict the price of an individual home.
+
+## Assessment values are not sale prices
+
+The project uses BC Assessment data, which is not directly linked to the actual sale prices of homes in this analysis. An assessed value therefore cannot tell us what a buyer would pay for a particular property. In addition, the dashboard filters **assessed land value**, which excludes the value of buildings and other improvements. A property falling within the dashboard's selected range does not establish that its full purchase price would fit the same budget, and the dataset does not indicate whether it is currently for sale.
+
+The trade-off is that assessment data gives us a common basis for comparing many properties across Vancouver, while limiting how directly those comparisons translate into purchasing decisions. The dashboard is useful for exploring areas; current listings and sale information would be needed to evaluate specific homes and their purchase prices.
+
+## Geographic summaries hide individual differences
+
+The maps group properties into geographic bins, and the regional charts summarize values using averages. These summaries make broad patterns easier to see, but can conceal substantial differences between properties within the same area. A regional average may be influenced by a small number of high-value properties or by differences in the mix of property types and sizes. It does not describe every home in that region or isolate the contribution of location from other characteristics.
+
+The trade-off is between a readable overview and detail about individual properties. Grouping records makes citywide comparisons manageable, but buyers should treat the resulting patterns as guidance for further investigation rather than as a valuation of a particular home. Property-level comparisons that account for size, type, and condition would be needed to assess how closely an individual home matches the area's overall pattern.

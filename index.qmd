@@ -1,0 +1,81 @@
+---
+title: "Introduction"
+---
+
+Where you look in Vancouver changes the property values you encounter. Citywide averages hide these geographic differences, so we explore how location and property characteristics shape assessed values—and what those patterns mean for prospective homebuyers.
+
+This project uses the City of Vancouver’s Property Tax Report dataset to explore assessed property values and property characteristics from 2020 to 2025. The data supports comparisons of land and improvement values, taxes, and zoning classifications across properties and years.
+
+## The Dataset
+
+The City of Vancouver collects and maintains this dataset using BC Assessment records and internal administrative sources. The M1 report describes approximately 200,000 Vancouver properties over the six-year period from 2020 to 2025. Records include property identifiers, location information, legal and zoning classifications, assessed land and improvement values, construction and major improvement years, and taxes.
+
+**Location and classification**
+
+**PROPERTY_POSTAL_CODE:** The property's postal code, providing location information for geographic comparisons.
+
+**ZONING_CLASSIFICATION:** The property's zoning classification, allowing comparisons across categories of land use.
+
+**Assessed value**
+
+**CURRENT_LAND_VALUE:** The assessed value of the land for the current assessment year, used to compare the land component of property value.
+
+**CURRENT_IMPROVEMENT_VALUE:** The assessed value of buildings and other improvements for the current assessment year, capturing the component separate from land.
+
+## Dataset Information
+
+**Dataset:** Property Tax Report
+
+**Source:** City of Vancouver, using BC Assessment records and internal administrative sources
+
+**URL:** [Property Tax Report — City of Vancouver Open Data Portal](https://opendata.vancouver.ca/explore/dataset/property-tax-report/information/?sort=-tax_assessment_year&dataChart=eyJxdWVyaWVzIjpbeyJjb25maWciOnsiZGF0YXNldCI6InByb3BlcnR5LXRheC1yZXBvcnQiLCJvcHRpb25zIjp7InNvcnQiOiItdGF4X2Fzc2Vzc21lbnRfeWVhciJ9fSwiY2hhcnRzIjpbeyJhbGlnbk1vbnRoIjp0cnVlLCJ0eXBlIjoiY29sdW1uIiwiZnVuYyI6IkFWRyIsInlBeGlzIjoiY3VycmVudF9sYW5kX3ZhbHVlIiwic2NpZW50aWZpY0Rpc3BsYXkiOnRydWUsImNvbG9yIjoiIzAyNzlCMSJ9XSwieEF4aXMiOiJsZWdhbF90eXBlIiwibWF4cG9pbnRzIjo1MCwic29ydCI6IiJ9XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D)
+
+**License:** [Open Government Licence - Vancouver](https://opendata.vancouver.ca/pages/licence/)
+
+**Date Accessed:** 2025/10/01
+
+**Time Period:** 2020–2025 (As of the time)
+
+The following attributes and summary values are transcribed from M1. For categorical attributes, the final column gives the number of distinct values; for quantitative and temporal attributes, M1 reports ranges instead. These summaries describe the M1 dataset, not a newly calculated or filtered dataset. The reported major improvement year of 200 is flagged in M1 as a data-quality issue.
+
+| Attribute Name | Attribute Type | Data Semantics | Cardinality / Reported Range |
+| :--- | :--- | :--- | :--- |
+| **PID** | Categorical (Nominal) | Unique property identifier | 227324 distinct values |
+| **LEGAL_TYPE** | Categorical (Nominal) | Property legal type (e.g., STRATA, LAND, OTHER) | 3 distinct values |
+| **FOLIO** | Categorical (Nominal) | BC Assessment folio identifier | 227892 distinct values |
+| **LAND_COORDINATE** | Categorical (Nominal) | First 8 digits of BC Assessment's folio number | 94576 distinct values |
+| **ZONING_DISTRICT** | Categorical (Nominal) | Name of zoning district | 975 distinct values |
+| **ZONING_CLASSIFICATION** | Categorical (Nominal) | Name of zoning classification | 12 distinct values |
+| **LOT** | Categorical (Nominal) | Legal lot identifier | 1000 distinct values |
+| **PLAN** | Categorical (Nominal) | Legal plan identifier | 17693 distinct values |
+| **BLOCK** | Categorical (Nominal) | Legal block identifier | 1019 distinct values |
+| **DISTRICT_LOT** | Categorical (Nominal) | Legal district lot identifier | 410 distinct values |
+| **FROM_CIVIC_NUMBER** | Categorical (Nominal) | House number | 3101 distinct values |
+| **TO_CIVIC_NUMBER** | Categorical (Nominal) | Blank unless it is the last house number in a range | 8621 distinct values |
+| **STREET_NAME** | Categorical (Nominal) | Street name | 1005 distinct values |
+| **PROPERTY_POSTAL_CODE** | Categorical (Nominal) | Postal code | 15540 distinct values |
+| **NARRATIVE_LEGAL_LINE1** | Categorical (Nominal) | Describes a property for registration purposes | 228474 distinct values |
+| **NARRATIVE_LEGAL_LINE2** | Categorical (Nominal) | Describes a property for registration purposes | 52348 distinct values |
+| **NARRATIVE_LEGAL_LINE3** | Categorical (Nominal) | Describes a property for registration purposes | 18398 distinct values |
+| **NARRATIVE_LEGAL_LINE4** | Categorical (Nominal) | Describes a property for registration purposes | 3464 distinct values |
+| **NARRATIVE_LEGAL_LINE5** | Categorical (Nominal) | Describes a property for registration purposes | 2124 distinct values |
+| **CURRENT_LAND_VALUE** | Quantitative | Assessed value of land (current year) | Min = 0, Max = 3637869000 |
+| **CURRENT_IMPROVEMENT_VALUE** | Quantitative | Assessed value of improvements (current year) | Min = 0, Max = 934655000 |
+| **TAX_ASSESSMENT_YEAR** | Temporal | Year in effect for Current_Land_Value, Current_Improvement_Value, and Tax_Levy | Min = 2020, Max = 2025 |
+| **PREVIOUS_LAND_VALUE** | Quantitative | Assessed value of land (previous year) | Min = 0, Max = 3606388000 |
+| **PREVIOUS_IMPROVEMENT_VALUE** | Quantitative | Assessed value of improvements (previous year) | Min = 0, Max = 934655000 |
+| **YEAR_BUILT** | Temporal | Year that the property was built | \[1800,2022\], step:irregular (per property) |
+| **BIG_IMPROVEMENT_YEAR** | Temporal | Year of major improvement to the property | \[200,2022\], step:irregular (per property) |
+| **TAX_LEVY** | Quantitative | Total taxes printed on the most recent tax notice | Min = 0, Max = 9760300 |
+| **NEIGHBOURHOOD_CODE** | Categorical (Nominal) | 3-digit number assigned by BCA identifying the neighbourhood for the folio | 30 distinct values |
+| **REPORT_YEAR** | Temporal | Year when data was extracted from source | Min = 2020, Max = 2025 |
+
+## Impact and Utility
+
+Motivated by our interest as soon-to-be graduates and young professionals hoping to live and work in Vancouver, this project helps readers explore differences in assessed property values and characteristics across the city. It provides context for people beginning to investigate Vancouver housing.
+
+To guide the reader through the data, this story addresses the following questions:
+
+### How does year-on-year assessed land-value change vary across Vancouver’s regions?
+
+Compare where increases are widespread and how average changes differ by region.

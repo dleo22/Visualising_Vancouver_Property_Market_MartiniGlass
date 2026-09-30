@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - charts/
+
+website:
+  #TODO: update title
+  title: "A Visualisation of Vancouver's Property Market " 
+  
+  sidebar:
+    style: "docked"
+    search: false
+    contents:
+      - text: "Introduction"
+        href: index.qmd
+        
+      # TODO: update this section according to your findings
+      - section: "Findings"
+        contents:
+          # - text: "{{Page 1 Title}}"
+          #   href: finding-01.qmd
+          - text: "Dominic - Location vs. Land Value"
+            href: finding-Dominic.qmd
+          # - text: "{{Page 2 Title}}"
+          #   href: finding-02.qmd
+          # - text: "{{Page 3 Title}}"
+          #   href: finding-03.qmd
+          # - text: "{{Page 4 Title}}"
+          #   href: finding-04.qmd
+
+      - text: "Interactive Dashboard"
+        href: dashboard.qmd
+      - text: "Project Limitations"
+        href: limitations.qmd
+      - text: "References & Sources"
+        href: reference.qmd
+
+format:
+  html:
+    theme: [cosmo] 
+    toc: false
+    include-in-header:
+      - text: |
+          <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+          <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+          <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>

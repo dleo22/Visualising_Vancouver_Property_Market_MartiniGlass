@@ -1,0 +1,48 @@
+---
+title: "Region and Year-on-Year Land Value Change in Vancouver"
+---
+<script>
+  vegaEmbed('#chart1', './charts/viz1_chart.json', {
+    renderer: 'svg',
+    actions: false,
+  })
+
+  vegaEmbed('#dashboard', './charts/view2_chart.json', {
+    renderer: 'svg',
+    actions: false,
+  })
+</script>
+
+## Research question
+
+**Does region affect year-on-year changes in assessed land value in Vancouver?** This investigation explores whether increases and decreases in land value follow geographic patterns and whether the average annual change differs across regions. Here, “affect” is investigated as an association: these visualizations can reveal regional differences, but cannot establish that region causes those differences.
+
+The first visualization explores average assessed land value across Vancouver without grouping properties by region. Comparing years helps identify rough geographic trends. The dashboard then introduces region classifications and brings together two perspectives: how widespread increases are within each geographic bin, and the average change in value within each region. The intended focus is assessed land value, rather than sale prices.
+
+## Preliminary investigation
+
+The first visualization provides a geographic starting point for the regional comparison. Properties are grouped into rectangular bins using latitude and longitude, and colour represents the average assessed land value within each bin. This allows readers to explore spatial patterns before introducing region boundaries.
+
+<div id="chart1"></div>
+
+*Figure 1: Average assessed land value by geographic bin in Vancouver for the selected report year.*
+
+Use the year slider to explore 2020–2025. Brighter bins represent higher average land values for the selected year. Move between consecutive years to investigate how the geographic pattern changes and where relatively high or low average values appear to persist. Hover over a bin to see its average land value and property count.
+
+This chart displays the **average value in each year**, rather than directly encoding the difference from the previous year. It therefore provides an exploratory view of geographic trends; the dashboard below focuses on year-on-year change. The bins are spatial groupings, not region classifications, and averages based on fewer properties may be more sensitive to individual assessments.
+
+## Dashboard: year-on-year change by region
+
+<div id="dashboard"></div>
+
+*Figure 2: A binned map showing the proportion of properties with an increase from the previous year (left), alongside a bar chart of average year-on-year value change by region (right).*
+
+Use the year dropdown to update both views together. Each selected report year is compared with its previous year, allowing readers to investigate whether regional patterns persist or change over time.
+
+The **left visualization** is a binned map of Vancouver. Greener squares indicate a higher proportion of properties whose assessed value increased from the previous year; redder squares indicate a lower proportion with increases, highlighting areas where decreases may be more common. The colour measures the prevalence of increases, not their dollar size. Hover over a square to see the property count and fraction with a positive change. A property with no change is also not counted as an increase, so the red end of the scale should not automatically be read as the percentage that decreased.
+
+The **right visualization** is a bar chart comparing the average change by region in Canadian dollars. Positive values indicate an average increase from the previous year, while negative values indicate an average decrease. Comparing the bars helps identify which regions experienced larger average gains or losses in the selected year.
+
+Together, the views distinguish **how widespread increases are** from **how large the average change is**. A region can have many properties with small increases, while a few large decreases reduce its average change. Conversely, a small number of large increases can raise an average even when increases are not widespread. Comparing the map and bars across years helps assess whether the geographic trends in the first visualization correspond to consistent regional differences.
+
+These comparisons are descriptive. Regional averages can reflect differences in property types, starting values, and the properties included in each year. Geographic bins may also span region boundaries. The dashboard supports investigation of an association between region and annual value change, rather than a causal conclusion.

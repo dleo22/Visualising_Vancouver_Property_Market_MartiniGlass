@@ -1,0 +1,30 @@
+---
+title: "TODO: Finding Title"
+---
+
+<!-- TODO: Copy and Paste this template for other findings -->
+
+<script>
+  // TODO: Update the JSON file paths to match your exported Altair/Vega-Lite chart specifications
+  vegaEmbed('#chart1', './charts/placeholder_chart.json', {
+    renderer: 'svg',
+    actions: false,
+  })
+
+  vegaEmbed('#chart2', './charts/scatter_placeholder.json', {
+    renderer: 'svg',
+    actions: false,
+  })
+</script>
+
+
+<div id="chart1"></div>
+*Figure 1: TODO: Update the figure caption accordingly*
+
+ TODO: Explain the significance of the plot
+
+<div id="chart2"></div>
+*Figure 2: TODO: Update the figure caption accordingly*
+
+<div id="dashboard"></div>
+*Dashboard: TODO: Update the figure caption accordingly*

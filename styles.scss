@@ -1,0 +1,12 @@
+/*-- scss:rules --*/
+
+.navbar-brand {
+  .navbar-title, 
+  span {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
+}
